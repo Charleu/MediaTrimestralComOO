@@ -9,13 +9,9 @@ namespace MediaTrimestralOO
         public double Nota2;
         public double Nota3;
 
-        public Aluno(string nome)
+        public Aluno(string nome, double nota1, double nota2, double nota3)
         {
             Nome = nome;
-        }
-
-        public void InformarNotas(double nota1, double nota2, double nota3)
-        {
             Nota1 = nota1;
             Nota2 = nota2;
             Nota3 = nota3;
@@ -28,7 +24,6 @@ namespace MediaTrimestralOO
 
         public override string ToString()
         {
-            
             return $"Aluno: {Nome}\n Nota1: {Nota1}\n Nota2: {Nota2}\n Nota3: {Nota3}\n";
         }
 
