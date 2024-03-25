@@ -4,17 +4,64 @@ namespace MediaTrimestralOO
 {
     class Aluno
     {
-        public string Nome;
-        public double Nota1;
-        public double Nota2;
-        public double Nota3;
+        private double _nota1;
+        private double _nota2;
+        private double _nota3;
 
-        public Aluno(string nome, double nota1, double nota2, double nota3)
+        public string Nome { get; set; }
+
+        public double Nota1
         {
-            Nome = nome;
-            Nota1 = nota1;
-            Nota2 = nota2;
-            Nota3 = nota3;
+            get 
+            {
+                return _nota1;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Nota do primeiro trimestre não pode ser negativa");
+                    return;
+                }
+
+                _nota1 = value;
+            }
+        }
+
+        public double Nota2
+        {
+            get 
+            {
+                return _nota2;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Nota do segundo trimestre não pode ser negativa");
+                    return;
+                }
+
+                _nota2 = value;
+            }
+        }
+
+        public double Nota3
+        {
+            get 
+            { 
+                return _nota3; 
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Nota do terceiro trimestre não pode ser negativa");
+                    return;
+                }
+
+                _nota3 = value;
+            }
         }
 
         public double CalcularNotaFinal()

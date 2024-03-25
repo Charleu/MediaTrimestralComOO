@@ -15,9 +15,13 @@ namespace MediaTrimestralOO
             Console.WriteLine($"Informe a nota do terceiro trimestre:");
             double nota3 = double.Parse(Console.ReadLine());
 
-            Aluno aluno = new Aluno(nome, nota1, nota2, nota3);
-            Console.WriteLine(aluno);
+            Aluno aluno = new Aluno();
+            aluno.Nome = nome;
+            aluno.Nota1 = nota1;
+            aluno.Nota2 = nota2;
+            aluno.Nota3 = nota3;
+            Console.WriteLine(aluno); 
             aluno.ExibirResultado();
         }
     }
-  }
+}
